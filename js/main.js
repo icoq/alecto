@@ -74,7 +74,7 @@ window.onload = function () {
     // triggerHook: "onScroll",
     duration: "100%",
     triggerHook: 0,
-    offset: "-200",
+    offset: "0",
     //loglevel: 2,
   })
     .setTween(timeline2)
