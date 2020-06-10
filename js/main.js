@@ -1,5 +1,5 @@
 const modal = document.querySelector(".nav>.navCont");
-const navItems = document.querySelector(".navItems");
+
 const items = document.querySelectorAll(".navItems__item-inner");
 const burger = document.querySelector(".burger");
 const burgerFix = document.querySelector(".burger>span");
@@ -12,21 +12,15 @@ burger.onclick = function () {
   $("body").toggleClass("scrollLock");
 };
 
+const navItems = document.querySelectorAll(".navItems__item-inner");
+
 window.onclick = function (event) {
-  if (
-    $(".navCont").hasClass("active") &&
-    event.target == document.querySelector(".logo")
-  ) {
-    $(".navCont").removeClass("active");
-    $(".burger").removeClass("active");
-    $("body").removeClass("scrollLock");
-  } else if (
-    $(".navCont").hasClass("active") &&
-    event.target == document.querySelector(".item-home")
-  ) {
-    $(".navCont").removeClass("active");
-    $(".burger").removeClass("active");
-    $("body").removeClass("scrollLock");
+  for (const navItem of navItems) {
+    if ($(".navCont").hasClass("active") && event.target == navItem) {
+      $(".navCont").removeClass("active");
+      $(".burger").removeClass("active");
+      $("body").removeClass("scrollLock");
+    }
   }
 };
 
