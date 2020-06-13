@@ -153,7 +153,7 @@ window.onload = function () {
 
         motionPath: {
           path: [
-            { x: 60, y: -60 },
+            { x: 60, y: -55 },
             { x: 80, y: -70 },
             { x: 70, y: 90 },
             { x: -90, y: 110 },
